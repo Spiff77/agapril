@@ -9,6 +9,7 @@ import { Product } from '../model/product.model';
 export class AppComponent {
   title = 'Mon premier projet angular';
   color = 'red'
+
   product: Product = {
     id : 1,
     name: 'Frank Zappa',
@@ -17,5 +18,9 @@ export class AppComponent {
     description: 'Un cd qu\'il est bien pour l\'écouter',
     price: 10,
     promo: .2
+  }
+
+  setDefaultColor(event: Event) {
+   this.color = (event.target as HTMLSelectElement).value
   }
 }
