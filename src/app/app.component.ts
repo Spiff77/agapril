@@ -8,7 +8,7 @@ import { Product } from '../model/product.model';
 })
 export class AppComponent {
   title = 'Mon premier projet angular';
-
+  color = 'red'
   product: Product = {
     id : 1,
     name: 'Frank Zappa',
@@ -18,5 +18,4 @@ export class AppComponent {
     price: 10,
     promo: .2
   }
-
 }
