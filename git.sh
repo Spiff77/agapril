@@ -17,7 +17,7 @@ then
 fi
 wcgit=$(git diff --exit-code | wc -l)
 
-if [ wcgit == 0 ]
+if [ $wcgit == 0 ]
 then
   echo "Nothing to commit..."
 else
