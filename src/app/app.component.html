@@ -1,18 +1,3 @@
 <h1>Welcome to {{title}}</h1>
 
-<h3 [style.color]="color">{{product.name}} ({{product.id}})</h3>
-<ul [style.color]="color">
-  <li>Category: {{product.category}}</li>
-  <li>Description: {{product.description}}</li>
-  <li>Active: {{product.active}}</li>
-</ul>
-<button (click)="product.active = !product.active">Toggle</button>
-
-<select name="color" id="color" (change)="setDefaultColor($event)">
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="green">Vert</option>
-</select>
-
-<app-main-parent></app-main-parent>
-<app-secondary-parent></app-secondary-parent>
+<app-total></app-total>

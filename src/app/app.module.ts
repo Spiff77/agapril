@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MainParentComponent } from './main-parent/main-parent.component';
 import { SecondaryParentComponent } from './secondary-parent/secondary-parent.component';
 import { ChildComponent } from './child/child.component';
+import { TotalComponent } from './plusone/total/total.component';
+import { CountelemComponent } from './plusone/countelem/countelem.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,8 @@ import { ChildComponent } from './child/child.component';
     MainParentComponent,
     SecondaryParentComponent,
     ChildComponent,
+    TotalComponent,
+    CountelemComponent,
   ],
   imports: [
     BrowserModule
