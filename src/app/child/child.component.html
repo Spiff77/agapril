@@ -1,3 +1,5 @@
- <h3>{{productName}}</h3>
+ <h3>{{10 | strLength:10}}</h3>
+ <p [style.visibility]="!product ? 'hidden' : 'visible' ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ipsa unde. Blanditiis exercitationem nostrum nulla! Accusantium dicta dolores iure maxime optio, quibusdam veniam. Aliquid labore perferendis praesentium soluta sunt voluptates!</p>
+ <p [style.display]="!product ? 'none' : 'block' ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ipsa unde. Blanditiis exercitationem nostrum nulla! Accusantium dicta dolores iure maxime optio, quibusdam veniam. Aliquid labore perferendis praesentium soluta sunt voluptates!</p>
  <p [hidden]="!product">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ipsa unde. Blanditiis exercitationem nostrum nulla! Accusantium dicta dolores iure maxime optio, quibusdam veniam. Aliquid labore perferendis praesentium soluta sunt voluptates!</p>
  <button (click)="sendValue()">Emit to parent</button>

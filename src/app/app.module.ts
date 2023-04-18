@@ -7,6 +7,7 @@ import { SecondaryParentComponent } from './secondary-parent/secondary-parent.co
 import { ChildComponent } from './child/child.component';
 import { TotalComponent } from './plusone/total/total.component';
 import { CountelemComponent } from './plusone/countelem/countelem.component';
+import { StrLengthPipe } from './str-length.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CountelemComponent } from './plusone/countelem/countelem.component';
     ChildComponent,
     TotalComponent,
     CountelemComponent,
+    StrLengthPipe,
   ],
   imports: [
     BrowserModule
