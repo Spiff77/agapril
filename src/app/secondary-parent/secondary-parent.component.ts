@@ -7,8 +7,11 @@ import {Product} from '../model/product.model';
   styleUrls: ['./secondary-parent.component.scss']
 })
 export class SecondaryParentComponent{
-  productName1 = "Trotinette"
-  productName2 = "TV"
+
+  productNames: string[] = ['Trotinette', 'TV', 'Tabouret de bar', 'Pilier de comptoir']
+  names: string[] = ['Anthony', 'Magali', 'Jéremy']
+
+  present = true;
 
   product: Product = {
     id : 2,
@@ -25,8 +28,8 @@ export class SecondaryParentComponent{
 
 
   getValueFromChild(value :string){
-    this.productName1 = "Test";
-    console.log("Received value from children: " + value)
+    this.present = false
+    console.log('Received value from children: ' + value)
   }
 
 }
