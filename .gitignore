@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+git.sh
 
 # Node
 /node_modules
