@@ -8,6 +8,7 @@ import { ChildComponent } from './child/child.component';
 import { TotalComponent } from './plusone/total/total.component';
 import { CountelemComponent } from './plusone/countelem/countelem.component';
 import { StrLengthPipe } from './str-length.pipe';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StrLengthPipe } from './str-length.pipe';
     StrLengthPipe,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
