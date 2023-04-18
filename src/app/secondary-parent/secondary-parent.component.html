@@ -2,8 +2,10 @@
 <div *ngIf="present">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius hic nemo nobis. Aliquid aperiam aspernatur doloribus eos eum iste laudantium quia, quis quo, ratione rem repellendus sapiente soluta sunt!
 </div>
+
 <ul>
   <li *ngFor="let n of names">{{n}}</li>
 </ul>
-
-<app-child *ngFor="let pname of productNames" [productName]="pname" (out)="getValueFromChild($event)"></app-child>
+<!--
+<app-child *ngFor="let pname of productNames" [productName]="pname" ></app-child>
+-->

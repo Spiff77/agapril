@@ -1,15 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
 import {Product} from '../model/product.model';
+import {NameService} from '../name.service';
 
 @Component({
   selector: 'app-secondary-parent',
   templateUrl: './secondary-parent.component.html',
   styleUrls: ['./secondary-parent.component.scss']
 })
-export class SecondaryParentComponent{
-
+export class SecondaryParentComponent implements OnInit{
   productNames: string[] = ['Trotinette', 'TV', 'Tabouret de bar', 'Pilier de comptoir']
-  names: string[] = ['Anthony', 'Magali', 'Jéremy']
+  names: string[] = []
 
   present = true;
 
@@ -23,13 +23,12 @@ export class SecondaryParentComponent{
     promo: .1
   }
 
-  constructor() {
+  constructor(public ns: NameService) {}
+
+  ngOnInit(): void {
+    this.names = this.ns.names
   }
 
 
-  getValueFromChild(value :string){
-    this.present = false
-    console.log('Received value from children: ' + value)
-  }
 
 }
