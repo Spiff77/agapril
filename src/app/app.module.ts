@@ -9,6 +9,17 @@ import { TotalComponent } from './plusone/total/total.component';
 import { CountelemComponent } from './plusone/countelem/countelem.component';
 import { StrLengthPipe } from './str-length.pipe';
 import {HttpClientModule} from '@angular/common/http';
+import {RouterModule, Routes} from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { Error404Component } from './error404/error404.component';
+
+const routes: Routes=[
+  {path: "",redirectTo: "/home", pathMatch: "full"},
+  {path: "home", component: HomeComponent},
+  {path: "main", component: MainParentComponent},
+  {path: "secondary", component: SecondaryParentComponent},
+  {path: "**", component: Error404Component},
+]
 
 @NgModule({
   declarations: [
@@ -19,10 +30,13 @@ import {HttpClientModule} from '@angular/common/http';
     TotalComponent,
     CountelemComponent,
     StrLengthPipe,
+    HomeComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

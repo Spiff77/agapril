@@ -14,4 +14,7 @@ export class UserService {
   findAll() : Observable<User[]>{
     return this.http.get<User[]>(this.url);
   }
+  remove(id: number) : Observable<null>{
+    return this.http.delete<null>(this.url)
+  }
 }

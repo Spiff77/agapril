@@ -1,8 +1,11 @@
 <h1>Welcome to {{title}}</h1>
-
-{{users?.length}}
 <ul>
-  <li *ngFor="let u of users"> {{u.username}}</li>
+  <li><a routerLink="/">Home page</a></li>
+  <li><a routerLink="/main">Main component</a></li>
+  <li><a routerLink="/secondary">Secondary component</a></li>
 </ul>
-<app-secondary-parent></app-secondary-parent>
-<app-main-parent></app-main-parent>
+
+<ul>
+  <li *ngFor="let u of users$ | async"> {{u.username}}</li>
+</ul>
+<router-outlet></router-outlet>
