@@ -1,0 +1,15 @@
+<h3> Add User</h3>
+<pre>
+  {{myform.value | json}}
+</pre>
+<form [formGroup]="myform" (ngSubmit)="submit()">
+  <div>
+    <label for="thename">Name</label>
+    <input formControlName="name" type="text" name="thename" id="thename">
+  </div>
+  <div>
+    <label for="theusername">User name</label>
+    <input formControlName="username" type="text" name="theusername" id="theusername">
+  </div>
+  <button type="submit">OKAY</button>
+</form>
