@@ -16,10 +16,19 @@ import { Error404Component } from './error404/error404.component';
 const routes: Routes=[
   {path: "",redirectTo: "/home", pathMatch: "full"},
   {path: "home", component: HomeComponent},
+  {path: "home/:id", component: HomeComponent},
   {path: "main", component: MainParentComponent},
   {path: "secondary", component: SecondaryParentComponent},
   {path: "**", component: Error404Component},
 ]
+
+/**
+ * /products ---> ProductListComponent
+ * /products/:id ---> ProductDetailComponent
+ * /home --> HomeComponent
+ * / ---redirect---> /home
+ * ** -----> Error404Component
+ **/
 
 @NgModule({
   declarations: [

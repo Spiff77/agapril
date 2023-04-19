@@ -1,11 +1,9 @@
 <h1>Welcome to {{title}}</h1>
 <ul>
   <li><a routerLink="/">Home page</a></li>
-  <li><a routerLink="/main">Main component</a></li>
+  <li><a [routerLink]="['/main', 34]">Main component</a></li>
   <li><a routerLink="/secondary">Secondary component</a></li>
 </ul>
 
-<ul>
-  <li *ngFor="let u of users$ | async"> {{u.username}}</li>
-</ul>
+
 <router-outlet></router-outlet>

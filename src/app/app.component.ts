@@ -11,7 +11,7 @@ import {logMessages} from '@angular-devkit/build-angular/src/builders/browser-es
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Mon premier projet angular';
   color = 'red'
 
@@ -25,18 +25,9 @@ export class AppComponent implements OnInit {
     promo: .2
   }
 
-  users$!: Observable<User[]>;
-
-  count = 1;
-
-  constructor(private us: UserService) {
-  }
 
   setDefaultColor(event: Event) {
     this.color = (event.target as HTMLSelectElement).value
   }
 
-  ngOnInit(): void {
-    this.users$ = this.us.findAll()
-  }
 }

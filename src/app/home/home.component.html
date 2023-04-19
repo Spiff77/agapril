@@ -1,1 +1,6 @@
 <h1>Welcome to my ouebpage</h1>
+
+ID: {{currentId}}
+<ul>
+  <li *ngFor="let u of users$ | async" [routerLink]="['/home',u.id]"> {{u.id}}: {{u.username}}</li>
+</ul>
