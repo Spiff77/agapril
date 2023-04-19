@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit{
     )
     // const id = this.activatedRoute.snapshot.paramMap.get("id")
     //this.currentId = Number(id)
-    this.users$ = this.us.findAll();
+    this.users$ = this.us.findAll()
   }
 
 }
