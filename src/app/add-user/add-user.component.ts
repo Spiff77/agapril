@@ -24,7 +24,7 @@ export class AddUserComponent implements OnInit{
       name:['', [Validators.required, Validators.minLength(3)]],
       username: [''],
       address: this.fb.group({
-        name:[''],
+        name:['House'],
         street: [''],
         city: ['']
       })
