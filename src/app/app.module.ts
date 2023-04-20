@@ -27,10 +27,11 @@ const routes: Routes=[
 
 /**
  * /products ---> ProductListComponent
+ * /products/add ---> ProductAddComponent
  * /products/:id ---> ProductDetailComponent
  * /home --> HomeComponent
  * / ---redirect---> /home
- * ** -----> Error404Component
+ * ** -----> Error404ComponentÒ
  **/
 
 @NgModule({

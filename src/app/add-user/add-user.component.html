@@ -1,7 +1,13 @@
 <h3> Add User</h3>
 <pre>
   {{myform.value | json}}
+  Valid {{myform.valid | json}}
 </pre>
+
+<ul *ngIf="!myform.valid && formSubmitted">
+  <li *ngIf="myform.controls['name']?.errors?.['minlength']">Name is too short</li>
+  <li *ngIf="myform.get('name')?.errors?.['required']">Name is mandatory</li>
+</ul>
 <form [formGroup]="myform" (ngSubmit)="submit()">
   <div>
     <label for="thename">Name</label>

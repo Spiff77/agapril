@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {NameService} from '../name.service';
 import {User} from '../model/user.model';
 import {UserService} from '../user.service';
@@ -13,23 +13,28 @@ import {Router} from '@angular/router';
 export class AddUserComponent implements OnInit{
 
   myform!: FormGroup;
+  formSubmitted = false;
 
-  constructor(private us: UserService, private router: Router) {
+  constructor(private us: UserService, private router: Router, private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
-    this.myform = new FormGroup<any>({
-      name: new FormControl(''),
-      username: new FormControl('')
+    new FormControl()
+    this.myform = this.fb.group({
+      name:['', [Validators.required, Validators.minLength(3)]],
+      username: ['']
     })
   }
 
 
   submit() {
-    console.log(this.myform.value)
-    this.us.add(this.myform.value).subscribe(v=> {
-      console.log(v)
-      this.router.navigateByUrl("/home")
-    })
+    this.formSubmitted = true;
+    if(this.myform.valid){
+      console.log(this.myform.value)
+      this.us.add(this.myform.value).subscribe(v=> {
+        console.log(v)
+        this.router.navigateByUrl("/home")
+      })
+    }
   }
 }
