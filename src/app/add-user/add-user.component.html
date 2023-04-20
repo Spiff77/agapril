@@ -9,16 +9,16 @@
   <li *ngIf="myform.get('name')?.errors?.['required']">Name is mandatory</li>
 </ul>
 <form [formGroup]="myform" (ngSubmit)="submit()">
-  <div>
-    <label for="thename">Name</label>
-    <input formControlName="name" type="text" id="thename">
-  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
   <div>
     <label for="theusername">User name</label>
     <input formControlName="username" type="text" id="theusername">
   </div>
 
-  <fieldset formGroupName="address">
+  <fieldset formGroupName="address" [ngClass]="getFormClass()">
     <legend>Address:</legend>
     <div>
       <label for="theaddressname">Name</label>

@@ -1,3 +1,21 @@
 :host {
   display: block;
 }
+
+.add-user legend{
+  font-weight: bold;
+}
+
+.submittedOk {
+  background-color: lightgreen;
+}
+.submittedOk legend{
+  color: green;
+}
+
+.submittedError {
+  background-color: palevioletred;
+}
+.submittedError legend{
+  color: red;
+}

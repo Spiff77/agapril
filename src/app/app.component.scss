@@ -1,0 +1,15 @@
+mat-card-header{
+  background-color: lightblue;
+  height: 180px;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+ul{
+  display: flex;
+  padding-left: 0;
+  li{
+    list-style-type: none;
+  }
+}

@@ -15,6 +15,15 @@ import { Error404Component } from './error404/error404.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddUserComponent } from './add-user/add-user.component';
 import { AddUserTemplateComponent } from './add-user-template/add-user-template.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { PersonDialogComponent } from './person-dialog/person-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 const routes: Routes=[
   {path: "",redirectTo: "/home", pathMatch: "full"},
@@ -49,13 +58,22 @@ const routes: Routes=[
     Error404Component,
     AddUserComponent,
     AddUserTemplateComponent,
+    PersonDialogComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

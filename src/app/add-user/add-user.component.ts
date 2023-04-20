@@ -19,7 +19,6 @@ export class AddUserComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    new FormControl()
     this.myform = this.fb.group({
       name:['', [Validators.required, Validators.minLength(3)]],
       username: [''],
@@ -41,5 +40,9 @@ export class AddUserComponent implements OnInit{
         this.router.navigateByUrl("/home")
       })
     }
+  }
+
+  getFormClass() {
+    return ['add-user ',  this.myform.valid ? 'submittedOk' : 'submittedError']
   }
 }
