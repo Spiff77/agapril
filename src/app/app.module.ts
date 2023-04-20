@@ -12,11 +12,13 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { Error404Component } from './error404/error404.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddUserComponent } from './add-user/add-user.component';
+import { AddUserTemplateComponent } from './add-user-template/add-user-template.component';
 
 const routes: Routes=[
   {path: "",redirectTo: "/home", pathMatch: "full"},
+  {path: "user/addtemplate", component: AddUserTemplateComponent},
   {path: "user/add", component: AddUserComponent},
   {path: "home", component: HomeComponent},
   {path: "home/:id", component: HomeComponent},
@@ -46,10 +48,12 @@ const routes: Routes=[
     HomeComponent,
     Error404Component,
     AddUserComponent,
+    AddUserTemplateComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],

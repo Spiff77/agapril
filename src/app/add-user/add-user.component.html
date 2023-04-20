@@ -3,7 +3,7 @@
   {{myform.value | json}}
   Valid {{myform.valid | json}}
 </pre>
-
+{{myform.get('name')?.errors | json}}
 <ul *ngIf="!myform.valid && formSubmitted">
   <li *ngIf="myform.controls['name']?.errors?.['minlength']">Name is too short</li>
   <li *ngIf="myform.get('name')?.errors?.['required']">Name is mandatory</li>

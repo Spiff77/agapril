@@ -1,0 +1,22 @@
+<h3>Form Template</h3>
+<pre>
+  {{user | json}}
+  {{myForm.valid}}
+  {{myForm.value |json}}
+</pre>
+
+<ul *ngIf="!myForm.valid && submitted">
+  <li *ngIf="myForm.controls['name']?.errors?.['required']">Username is required</li>
+  <li *ngIf="nameinput?.errors?.['minlength']">Username is too short</li>
+</ul>
+<form (ngSubmit)="submit(myForm)" #myForm="ngForm">
+  <div>
+    <label for="thename">Name</label>
+    <input [(ngModel)]="user.name" type="text" name="name" id="thename" required minlength="3" #nameinput="ngModel">
+  </div>
+  <div>
+    <label for="theusername">Username</label>
+    <input [(ngModel)]="user.username" type="text" name="username" id="theusername">
+  </div>
+  <button>OK</button>
+</form>
