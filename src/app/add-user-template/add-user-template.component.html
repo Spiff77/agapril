@@ -15,6 +15,10 @@
     <input [(ngModel)]="user.name" type="text" name="name" id="thename" required minlength="3" #nameinput="ngModel">
   </div>
   <div>
+    <label for="thename">Name</label>
+    <input type="text" name="name" id="thevalue" required minlength="3">
+  </div>
+  <div>
     <label for="theusername">Username</label>
     <input [(ngModel)]="user.username" type="text" name="username" id="theusername">
   </div>

@@ -11,11 +11,23 @@
 <form [formGroup]="myform" (ngSubmit)="submit()">
   <div>
     <label for="thename">Name</label>
-    <input formControlName="name" type="text" name="thename" id="thename">
+    <input formControlName="name" type="text" id="thename">
   </div>
   <div>
     <label for="theusername">User name</label>
-    <input formControlName="username" type="text" name="theusername" id="theusername">
+    <input formControlName="username" type="text" id="theusername">
   </div>
+
+  <fieldset formGroupName="address">
+    <legend>Address:</legend>
+    <div>
+      <label for="theaddressname">Name</label>
+      <input formControlName="name" type="text" id="theaddressname">
+    </div>
+    <div>
+      <label for="theaddressstreet">Street Name</label>
+      <input formControlName="street" type="text" id="theaddressstreet">
+    </div>
+  </fieldset>
   <button type="submit">OKAY</button>
 </form>

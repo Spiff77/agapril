@@ -22,7 +22,12 @@ export class AddUserComponent implements OnInit{
     new FormControl()
     this.myform = this.fb.group({
       name:['', [Validators.required, Validators.minLength(3)]],
-      username: ['']
+      username: [''],
+      address: this.fb.group({
+        name:[''],
+        street: [''],
+        city: ['']
+      })
     })
   }
 
